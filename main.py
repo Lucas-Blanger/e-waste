@@ -29,20 +29,20 @@ def gerarMapa(coordenadasInicio, coordenadasFim, nomePonto):
     mapa = folium.Map(location=coordenadasInicio, zoom_start=14)
     
     # Marcador para o ponto de início
-    folium.Marker(location=coordenadasInicio, popup="Início", icon=folium.Icon(color='blue')).add_to(mapa)
+    folium.Marker(location=coordenadasInicio, popup="Você", icon=folium.Icon(color='blue')).add_to(mapa)
     
     # Marcador para o ponto final
     folium.Marker(location=coordenadasFim, popup=nomePonto, icon=folium.Icon(color='green')).add_to(mapa)
     
     # Desenhar a rota
-    folium.PolyLine(locations=[coordenadasInicio, coordenadasFim], color="blue", weight=2.5, opacity=1).add_to(mapa)
+    folium.PolyLine(locations=[coordenadasInicio, coordenadasFim], color="red", weight=2.5, opacity=1).add_to(mapa)
     
     # Exibir o mapa
     return mapa
 
 
 # Coordenadas fornecidas pelo usuário 
-pontoUsuario = (-29.6838493, -53.8082499)
+pontoUsuario = (-29.682608, -53.8133689)
 
 # Encontrar o ponto mais próximo
 pontoMaisProximo, distancia = encontrarPontoMaisProximo(pontoUsuario, pontosPredefinidos)
