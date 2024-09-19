@@ -2,8 +2,8 @@ import folium
 from geopy.distance import geodesic
 from haversine import haversine
 
-# Pontos predefinidos 
-pontosPredefinidos = [
+# Pontos de coleta
+pontosColeta = [
     {"nome": "ASMAR", "coordenadas": (-29.6834813, -53.8565529)},
     {"nome": "MULTIPLASPEL", "coordenadas": (-29.701601, -53.8431684)},
     {"nome": "MARINGÁ METAIS", "coordenadas": (-29.7120329, -53.8136437)},
@@ -17,7 +17,7 @@ def encontrarPontoMaisProximo(coordenadasInicio, pontos):
     menorDistancia = float('inf')
     
     for ponto in pontos:
-        distancia = haversine(coordenadasInicio, ponto["coordenadas"])  # Distância em km
+        distancia = haversine(coordenadasInicio, ponto["coordenadas"])  
         if distancia < menorDistancia:
             menorDistancia = distancia
             pontoMaisProximo = ponto
@@ -45,7 +45,7 @@ def gerarMapa(coordenadasInicio, coordenadasFim, nomePonto):
 pontoUsuario = (-29.682608, -53.8133689)
 
 # Encontrar o ponto mais próximo
-pontoMaisProximo, distancia = encontrarPontoMaisProximo(pontoUsuario, pontosPredefinidos)
+pontoMaisProximo, distancia = encontrarPontoMaisProximo(pontoUsuario, pontosColeta)
 
 # Gerar o mapa com a rota
 mapa = gerarMapa(pontoUsuario, pontoMaisProximo["coordenadas"], pontoMaisProximo["nome"])
