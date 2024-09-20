@@ -1,7 +1,10 @@
+from flask import Flask, request, jsonify, render_template
 import folium
 from haversine import haversine
 import osmnx as ox
 import networkx as nx
+
+app = Flask(__name__)
 
 pontosColeta = [
     {"nome": "ASMAR", "coordenadas": (-29.6834813, -53.8565529)},
@@ -10,6 +13,8 @@ pontosColeta = [
     {"nome": "SHOPPING PRAÇA NOVA", "coordenadas": (-29.706964, -53.829359)},
     {"nome": "CAMPUS DA UFSM", "coordenadas": (-29.713287, -53.7176128)},
 ]
+
+user_location = None
 
 def encontrarPontoMaisProximo(coordenadasInicio, pontos):
     pontoMaisProximo = None
@@ -50,13 +55,26 @@ def gerarMapaComRota(coordenadasInicio, coordenadasFim, nomePonto):
     
     return mapa
 
-pontoUsuario = (-29.682608, -53.8133689)
+@app.route('/')
+def index():
+    return render_template('index.html')  
 
-pontoMaisProximo, distancia = encontrarPontoMaisProximo(pontoUsuario, pontosColeta)
+@app.route('/coordenadas', methods=['POST'])
+def coordenadas():
+    global user_location
+    data = request.json
+    user_location = (data['latitude'], data['longitude'])
+    return jsonify(success=True)
 
-mapa = gerarMapaComRota(pontoUsuario, pontoMaisProximo["coordenadas"], pontoMaisProximo["nome"])
-
-mapa.save("rota.html")
-
-print(f"Rota até o ponto mais próximo: {pontoMaisProximo['nome']}")
-print(f"Distância: {distancia:.2f} km")
+@app.route('/rota')
+def rota():
+    if user_location:
+        pontoMaisProximo, distancia = encontrarPontoMaisProximo(user_location, pontosColeta)
+        mapa = gerarMapaComRota(user_location, pontoMaisProximo["coordenadas"], pontoMaisProximo["nome"])
+        mapa.save("static/rota.html")  
+        return render_template('rota.html', ponto=pontoMaisProximo['nome'], distancia=distancia)
+    else:
+        return "Localização não encontrada", 400
+    
+if __name__ == '__main__':
+    app.run(debug=True)

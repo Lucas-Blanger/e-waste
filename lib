@@ -1,2 +1,5 @@
+pip install folium
+pip install haversine
 pip install osmnx
 pip install scikit-learn
+pip install flask folium haversine osmnx networkx
