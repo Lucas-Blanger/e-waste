@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pilha map</title>
-    <link rel="stylesheet" href="style\style.css">
-    <link rel="icon" href="" type="image/x-icon">
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="../static/script.js" defer></script>
 </head>
 <body onload="getLocation()">
-    <h1>Obtendo sua localização...</h1>
+    <div class="container">
+        <div class="text-section">
+            <h1>Pilha Map</h1>
+            <h2>Subtítulo Informativo</h2>
+        </div>
+        <div class="carousel">
+            <button id="prev-btn" class="carousel-btn prev-btn">&#10094;</button>
+            <div class="carousel-images">
+                <img src="../assets/img/img1.png" alt="Imagem 1">
+                <img src="../assets/img/img2.png" alt="Imagem 2">
+                <img src="../assets/img/img3.png" alt="Imagem 3">
+                <img src="../assets/img/img4.png" alt="Imagem 4">
+            </div>
+            <button id="next-btn" class="carousel-btn next-btn">&#10095;</button>
+        </div>
+    </div>
 </body>
 </html>

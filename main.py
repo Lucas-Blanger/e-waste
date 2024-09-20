@@ -29,14 +29,19 @@ def encontrarPontoMaisProximo(coordenadasInicio, pontos):
     return pontoMaisProximo, menorDistancia
 
 def gerarMapaComRota(coordenadasInicio, coordenadasFim, nomePonto):
-    G = ox.graph_from_point(coordenadasInicio, dist=5000, network_type='walk')
+    custom_filter = ('["highway"!~"cycleway|footway|path|pedestrian|steps|track"]'
+                     '["service"!~"private|driveway"]')
+    
+    G = ox.graph_from_point(coordenadasInicio, dist=5000, network_type='drive', retain_all=True, custom_filter=custom_filter)
 
-    # Encontrar os nós mais próximos no grafo para as coordenadas de início e fim
+    G = ox.add_edge_speeds(G)
+    G = ox.add_edge_travel_times(G)
+
     origem = ox.nearest_nodes(G, coordenadasInicio[1], coordenadasInicio[0])
     destino = ox.nearest_nodes(G, coordenadasFim[1], coordenadasFim[0])
 
-    # Calcular a rota mais curta
-    rota = nx.shortest_path(G, origem, destino, weight='length')
+    # Calcular a rota mais curta com base no tempo de viagem
+    rota = nx.shortest_path(G, origem, destino, weight='travel_time')
 
     # Obter as coordenadas da rota
     coordenadasRota = [(G.nodes[n]['y'], G.nodes[n]['x']) for n in rota]
@@ -54,6 +59,7 @@ def gerarMapaComRota(coordenadasInicio, coordenadasFim, nomePonto):
     folium.PolyLine(locations=coordenadasRota, color="red", weight=2.5, opacity=1).add_to(mapa)
     
     return mapa
+
 
 @app.route('/')
 def index():

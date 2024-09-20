@@ -1,3 +1,36 @@
+let index = 0;
+const images = document.querySelectorAll('.carousel-images img');
+const totalImages = images.length;
+
+function showNextImage() {
+    index = (index + 1) % totalImages;
+    updateCarousel();
+}
+
+function showPrevImage() {
+    index = (index - 1 + totalImages) % totalImages;
+    updateCarousel();
+}
+
+function updateCarousel() {
+    const offset = -index * 100;
+    document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+}
+
+document.getElementById('next-btn').addEventListener('click', () => {
+    console.log("Próxima imagem");
+    showNextImage();
+});
+
+document.getElementById('prev-btn').addEventListener('click', () => {
+    console.log("Imagem anterior");
+    showPrevImage();
+});
+
+document.getElementById('next-btn').addEventListener('click', showNextImage);
+document.getElementById('prev-btn').addEventListener('click', showPrevImage);
+setInterval(showNextImage, 3000);
+
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -10,7 +43,6 @@ function showPosition(position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
     
-    // Enviar coordenadas para o backend
     fetch('/coordenadas', {
         method: 'POST',
         headers: {
@@ -19,7 +51,7 @@ function showPosition(position) {
         body: JSON.stringify({ latitude: lat, longitude: lon })
     }).then(response => {
         if (response.ok) {
-            window.location.href = "/static/rota.html";  // Redireciona para a página do mapa
+            window.location.href = "/static/rota.html";  
         }
     }).catch(error => console.log("Erro ao enviar coordenadas:", error));
 }
