@@ -1,5 +1,5 @@
-
-  * {
+/* Estilos gerais */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,32 +9,38 @@ body {
     font-family: Arial, sans-serif;
     background-color: #005C8B;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between; 
     height: 100vh;
 }
 
 .container {
+    border-radius: 250px;
     display: flex;
     width: 80%;
     height: 60vh;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
 }
 
 .text-section {
+    text-align: center;
     flex: 1;
-    padding: 20px;
+    padding: 80px;
     background-color: #f7f7f7;
+    border-radius: 50px 20px;
 }
 
 h1 {
     font-size: 36px;
+    font-family: "Kanit", sans-serif;
     color: #005C8B;
 }
 
 h2 {
     font-size: 24px;
+    font-family: "Kanit", sans-serif;
     color: #555;
     margin-top: 10px;
 }
@@ -46,6 +52,7 @@ h2 {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    border-radius: 10px 20px;
 }
 
 .carousel-images {
@@ -83,4 +90,62 @@ h2 {
 
 .carousel-btn:hover {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.menu-bar {
+    background-color: #0c3246;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-bar ul li {
+    margin-right: 20px;
+}
+
+.menu-bar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.menu-bar ul li a:hover {
+    background-color: #0c3246;
+    border-radius: 5px;
+}
+
+
+.wave-section {
+    position: relative;
+    background-color: #0c3246;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: auto; 
+}
+
+.wave .shape-fill {
+    fill: #28607e;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.text_made {
+    font-family: "Kanit", sans-serif;
+    font-style: normal;
+    font-size: 14px;
 }
