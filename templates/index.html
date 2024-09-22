@@ -14,16 +14,16 @@
     <header>
         <nav class="menu-bar">
             <ul>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#contact">Pontos</a></li>
-                <li><a href="#contact">Mias Informações</a></li>
+                <li><button onclick="scrollToSectionAbout()">Sobre</button></li>
+                <li><button onclick="scrollToSectionPoints()">Pontos</button></li>
+                <li><button onclick="scrollToSectionInfo()">Informações</button></li>
             </ul>
         </nav>
     </header>
     <div class="container">
         <div class="text-section">
             <h1>Pilha Map</h1>
-            <h2>Subtítulo Informativo</h2>
+            <h2>Bem vindos</h2>
         </div>
         <div class="carousel">
             <button id="prev-btn" class="carousel-btn prev-btn">&#10094;</button>
@@ -36,6 +36,56 @@
             <button id="next-btn" class="carousel-btn next-btn">&#10095;</button>
         </div>
     </div>
+    <div class="arrow">↓</div>
+    <section id="points-section" class="points-section">
+        <h2>Pontos de Coleta</h2>
+        <ul class="points-list">
+            <li>
+                <button class="point-item" onclick="toggleInfo(0)">ASMAR</button>
+                <div class="point-info" id="info-0">
+                    <p>Endereço: Rua dos Branquilhos, n° 79, Bairro Nova Santa Marta</p>
+                    <p>Telefone: (55) 98111-0146</p>
+                    <p>Horário: 9h - 18h</p>
+                    <p>Materiais aceitos: CPU’s, estabilizadores, nobreaks, placas eletrônicas em geral, celulares, tablets, notebooks, fios e impressoras</p>
+                </div>
+            </li>
+            <li>
+                <button class="point-item" onclick="toggleInfo(1)">MULTIPLASPEL</button>
+                <div class="point-info" id="info-1">
+                    <p>Endereço: BR 158, n° 199 Bairro Boi Morto</p>
+                    <p>Telefone e WhatsApp: (55) 3212-6074</p>
+                    <p>Horário: 9h - 18h</p>
+                    <p>Materiais aceitos: Todos os tipos</p>
+                </div>
+            </li>
+            <li>
+                <button class="point-item" onclick="toggleInfo(2)">MARINGÁ METAIS</button>
+                <div class="point-info" id="info-2">
+                    <p>Endereço: Rua Miguel de Carvalho Macedo, nº 250, Bairro Uglione</p>
+                    <p:>Telefone: (55) 3213-2074</p>
+                    <p>Horário: 9h - 18h</p>
+                    <p>E-mail: maringametais@hotmail.com</p>
+                    <p>Materiais aceitos: Todos os tipos</p>
+                </div>
+            </li>
+            <li>
+                <button class="point-item" onclick="toggleInfo(3)">SHOPPING PRAÇA NOVA</button>
+                <div class="point-info" id="info-3">
+                    <p>Endereço: BR-287 com Rua Irmã Dulce, nº 2.885, Bairro Patronato</p>
+                    <p>Horário: 9h - 18h</p>
+                    <p>Materiais aceitos: Todos os tipos</p>
+                </div>
+            </li>
+            <li>
+                <button class="point-item" onclick="toggleInfo(4)">CAMPUS DA UFSM</button>
+                <div class="point-info" id="info-4">
+                    <p>Endereço: RAv. Roraima, nº 1000, Cidade Universitária, Bairro Camobi</p>
+                    <p>Materiais aceitos: Todos os tipos</p>
+                </div>
+            </li>
+            <li>
+        </ul>
+    </section>
     <section class="wave-section">
         <div class="content">
             <p class="text_made">Made by João Guasso, Leonardo Brisolla e Lucas Blanger.</p>

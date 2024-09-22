@@ -29,7 +29,23 @@ document.getElementById('prev-btn').addEventListener('click', () => {
 
 document.getElementById('next-btn').addEventListener('click', showNextImage);
 document.getElementById('prev-btn').addEventListener('click', showPrevImage);
-setInterval(showNextImage, 3000);
+setInterval(showNextImage, 6000);
+
+function toggleInfo(index) {
+    const info = document.getElementById(`info-${index}`);
+    const isVisible = info.style.display === "block";
+
+    document.querySelectorAll('.point-info').forEach(el => el.style.display = 'none');
+
+    if (!isVisible) {
+        info.style.display = "block";
+    }
+}
+
+function scrollToSectionPoints() {
+    const section = document.getElementById("points-section");
+    section.scrollIntoView({ behavior: "smooth" });
+}
 
 function getLocation() {
     if (navigator.geolocation) {

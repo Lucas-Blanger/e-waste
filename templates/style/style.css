@@ -18,10 +18,11 @@ body {
     border-radius: 250px;
     display: flex;
     width: 80%;
-    height: 60vh;
+    height: 90vh; 
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: auto;
+    margin: 100px auto;
+    flex-direction: row
 }
 
 .text-section {
@@ -94,7 +95,6 @@ h2 {
 
 .menu-bar {
     background-color: #0c3246;
-    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -114,16 +114,17 @@ h2 {
     margin-right: 20px;
 }
 
-.menu-bar ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    transition: background-color 0.3s;
+.menu-bar ul li button {
+    background: none; 
+    border: none; 
+    color: white; 
+    cursor: pointer; 
+    font-family: "Kanit", sans-serif; 
+    font-size: 20px; 
 }
 
-.menu-bar ul li a:hover {
-    background-color: #0c3246;
-    border-radius: 5px;
+.menu-bar ul li button:hover {
+    color: lightgray; /* Muda a cor do texto ao passar o mouse */
 }
 
 
@@ -147,5 +148,50 @@ h2 {
 .text_made {
     font-family: "Kanit", sans-serif;
     font-style: normal;
+    color: white;
     font-size: 14px;
+}
+
+.points-section {
+    margin-top: 100px;  
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.points-list {
+    font-family: "Kanit", sans-serif;
+    list-style: none;
+    padding: 0;
+}
+
+.point-item {
+    font-family: "Kanit", sans-serif;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #005C8B;
+    cursor: pointer;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.point-info {
+    display: none; 
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-left: 3px solid #005C8B;
+    margin-top: 5px;
+}
+
+.arrow {
+    position: relative;
+    bottom: 30px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
 }
