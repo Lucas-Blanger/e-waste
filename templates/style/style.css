@@ -15,22 +15,22 @@ body {
 }
 
 .container {
-    border-radius: 250px;
+    border-radius: 25px;
     display: flex;
-    width: 80%;
-    height: 90vh; 
+    width: 95%;
+    height: 600px;
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 100px auto;
-    flex-direction: row
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+    flex-direction: row;
 }
 
 .text-section {
     text-align: center;
     flex: 1;
-    padding: 80px;
+    padding: 40px;
     background-color: #f7f7f7;
-    border-radius: 50px 20px;
+    border-radius: 25px;
 }
 
 h1 {
@@ -53,44 +53,19 @@ h2 {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    border-radius: 10px 20px;
+    border-radius: 25px;
 }
 
 .carousel-images {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 400%;
+    width: 400%; 
 }
 
 .carousel-images img {
-    width: 100%;
+    width: 400%; 
     height: auto;
-}
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    z-index: 1;
-    border-radius: 50%;
-}
-
-.prev-btn {
-    left: 10px;
-}
-
-.next-btn {
-    right: 10px;
-}
-
-.carousel-btn:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 25px;
 }
 
 .menu-bar {
@@ -153,7 +128,7 @@ h2 {
 }
 
 .points-section {
-    margin-top: 100px;  
+    margin-top:400px;  
     padding: 20px;
     background-color: #f9f9f9;
 }
@@ -186,7 +161,7 @@ h2 {
 
 .arrow {
     position: relative;
-    bottom: 30px;
+    bottom: -350px;
     left: 10px;
     width: 50px;
     height: 50px;

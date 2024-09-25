@@ -8,9 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Guerrilla&display=swap" rel="stylesheet">
-    <script src="../static/script.js" defer></script>
 </head>
-<body onload="getLocation()">
+<body>
     <header>
         <nav class="menu-bar">
             <ul>
@@ -23,15 +22,16 @@
     <div class="container">
         <div class="text-section">
             <h1>Pilha Map</h1>
-            <h2>Bem vindos</h2>
+            <h1>Permitir acesso à sua localização</h1>
+            <button id="getLocation">Permitir Localização</button>
         </div>
         <div class="carousel">
             <button id="prev-btn" class="carousel-btn prev-btn">&#10094;</button>
             <div class="carousel-images">
-                <img src="../assets/img/img1.png" alt="Imagem 1">
-                <img src="../assets/img/img2.png" alt="Imagem 2">
-                <img src="../assets/img/img3.png" alt="Imagem 3">
-                <img src="../assets/img/img4.png" alt="Imagem 4">
+                <img src="assets/img/img1.png" alt="Imagem 1">
+                <img src="assets/img/img2.png" alt="Imagem 2">
+                <img src="assets/img/img3.png" alt="Imagem 3">
+                <img src="assets/img/img4.png" alt="Imagem 4">
             </div>
             <button id="next-btn" class="carousel-btn next-btn">&#10095;</button>
         </div>
@@ -94,5 +94,7 @@
             </footer>
         </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
