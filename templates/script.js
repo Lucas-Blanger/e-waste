@@ -60,3 +60,12 @@ function scrollToSectionPoints() {
     const section = document.getElementById("points-section");
     section.scrollIntoView({ behavior: "smooth" });
 }
+
+function scrollToSectionAbout() {
+    const section = document.getElementById("sobre");
+    section.scrollIntoView({ behavior: "smooth" });
+}
+
+document.getElementById("button-prefeitura").addEventListener("click", function() {
+    window.open("https://www.santamaria.rs.gov.br/descarte-legal", "_blank");
+});

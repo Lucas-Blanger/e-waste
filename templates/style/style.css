@@ -9,11 +9,55 @@ body {
     background-color: #005C8B;
 }
 
-#getLocation{
+#getLocation {
     background-color: #005C8B;
     font-family: "Kanit", sans-serif; 
-
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
+
+#getLocation:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #005C8B; 
+    border-radius: 10rem;
+    z-index: -2;
+}
+
+#getLocation:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #004571; 
+    transition: all .3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+
+#getLocation:hover {
+    color: #fff;
+}
+
+#getLocation:hover:before {
+    width: 100%;
+}
+
 
 .container {
     display: flex; 
@@ -30,14 +74,23 @@ body {
 
 .text-section {
     flex: 1; 
-    padding: 20px;
+    padding: 10px;
     color: #005C8B;
     text-align: center;
     font-family: "Kanit", sans-serif; 
 }
 
-.text-section h1, .text-section h2 {
+.text-section h1 {
+    margin: 5px 0;
+    font-size: 50px;
+
+}
+
+.text-section h2 {
+    padding-top: 50px;
     margin: 10px 0;
+    font-size: 20px;
+    padding-bottom: 50px;
 }
 
 .carousel-section {
@@ -195,3 +248,98 @@ body {
     border-left: 3px solid #005C8B;
     margin-top: 5px;
 }
+
+
+.sobre{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background-color: #005C8B;
+    font-family: "Kanit", sans-serif;
+    color: #e9e6e6;
+}
+
+#h1-sobre {
+    text-align: center;
+}
+
+#p-sobre{
+    text-align: justify;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+#p1-sobre{
+    text-align: justify;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#p2-sobre{
+    text-align: justify;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#p3-sobre{
+    text-align: justify;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#button-prefeitura {
+    margin-top: 20px;
+    font-family: "Kanit", sans-serif;
+    padding: 16px 42px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.5);
+    line-height: 1.25;
+    background: #235f80;
+    text-decoration: none;
+    user-select: none;
+    color: white;
+    font-size: 16px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    position: relative;
+    transition: background-color .6s ease;
+    overflow: hidden;
+  }
+
+  #button-prefeitura:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    top: var(--mouse-y);
+    left: var(--mouse-x);
+    transform-style: flat;
+    transform: translate3d(-50%, -50%, 0);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    transition: width .3s ease, height .3s ease;
+  }
+  
+  #button-prefeitura:focus,
+  #button-prefeitura:hover {
+    background: #0c3246; 
+  }
+  
+  #button-prefeitura:active:after {
+    width: 300px;
+    height: 300px;
+  }
+
+  .div-button-prefeitura{
+    display: flex;
+    justify-content: center;
+  }

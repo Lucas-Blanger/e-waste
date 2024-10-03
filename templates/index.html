@@ -13,16 +13,16 @@
     <header>
         <nav class="menu-bar">
             <ul>
-                <li><button onclick="scrollToSectionAbout()">Sobre</button></li>
                 <li><button onclick="scrollToSectionPoints()">Pontos</button></li>
-                <li><button onclick="scrollToSectionInfo()">Informações</button></li>
+                <li><button onclick="scrollToSectionAbout()">Sobre</button></li>
+                <li><button onclick="scrollToSectionFeedback()">Feedback</button></li>
             </ul>
         </nav>
     </header>
      <div class="container">
         <div class="text-section">
             <h1>Pilha Map</h1>
-            <h2>Permitir acesso à sua localização</h2>
+            <h2>Clique no botão para saber o ponto de coleta de lixo eletrônico mais próximo</h2>
             <button id="getLocation">Permitir Localização</button>
         </div>
 
@@ -87,6 +87,39 @@
             </li>
             <li>
         </ul>
+    </section>
+    <section id="sobre" class="sobre">
+        <div>
+            <h1 id="h1-sobre">Sobre</h1>
+        <div>
+            <p id="p-sobre">O Pilha Map é um projeto desenvolvido no âmbito da 
+                disciplina de Computadores e Sociedade, oferecido pelo Centro 
+                de Tecnologia da Universidade Federal de Santa Maria (UFSM). 
+                O aplicativo tem como objetivo auxiliar a comunidade de Santa 
+                Maria na localização de pontos de coleta de lixo eletrônico, 
+                promovendo uma destinação correta e sustentável para esse tipo 
+                de resíduo.
+            </p>
+            <p id="p1-sobre">Por meio de mapas interativos, o Pilha Map permite que os usuários 
+                encontrem os locais mais próximos onde podem descartar corretamente 
+                eletrônicos, como pilhas, baterias, e outros aparelhos eletrônicos. 
+                Esses pontos de coleta são essenciais para o descarte seguro de resíduos 
+                que, se não tratados adequadamente, podem causar danos ao meio ambiente 
+                devido à presença de substâncias tóxicas.
+            </p>
+            <p id="p2-sobre">
+                Além de sua função prática, o Pilha Map reflete a 
+                preocupação do projeto com a conscientização ambiental e a 
+                responsabilidade social, incentivando práticas de descarte 
+                consciente e o reaproveitamento de materiais.
+            </p>
+            <p id="p3-sobre">Para mais informações, entre no site da prefeitura para mais
+                 informações. Site abaixo:</p>
+        </div>
+            <div class="div-button-prefeitura">
+                <button id="button-prefeitura">Site da Prefeitura</button>
+            </div>        
+        </div>
     </section>
     <section class="wave-section">
         <div class="content">
