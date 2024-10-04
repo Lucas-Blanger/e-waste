@@ -69,3 +69,29 @@ function scrollToSectionAbout() {
 document.getElementById("button-prefeitura").addEventListener("click", function() {
     window.open("https://www.santamaria.rs.gov.br/descarte-legal", "_blank");
 });
+
+
+function scrollToSectionFeedback() {
+    const section = document.getElementById("feedback");
+    section.scrollIntoView({ behavior: "smooth" });
+}
+
+function enviarFeedback() {
+    const feedback = document.getElementById("areaFeedback").value;
+
+    fetch('salvarFeedback.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'feedback=' + encodeURIComponent(feedback)
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log('Sucesso:', data);
+        alert('Feedback enviado com sucesso!');
+    })
+    .catch((error) => {
+        console.error('Erro:', error);
+    });
+}
