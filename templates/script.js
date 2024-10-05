@@ -10,10 +10,9 @@ function success(position) {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
 
-    // Redirecionar para a página do mapa com as coordenadas na URL
-    window.location.href = `mapa.html?lat=${latitude}&lng=${longitude}`;
-}
+    window.open(`mapa.html?lat=${latitude}&lng=${longitude}`, '_blank');
 
+}
 function error() {
     alert("Não foi possível obter sua localização.");
 }
@@ -40,7 +39,6 @@ let currentIndex = 0;
 
     setInterval(nextImage, 4000); 
 
-    // Eventos para os botões de navegação
     document.getElementById('nextBtn').addEventListener('click', nextImage);
     document.getElementById('prevBtn').addEventListener('click', prevImage);
 

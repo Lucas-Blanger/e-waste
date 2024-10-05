@@ -37,11 +37,11 @@ function initMap() {
     });
 
     // Criar o mapa centrado na localização do usuário
-    const map = L.map('map').setView(userLocation, 14);
+    const map = L.map('map').setView(userLocation, 11);
 
     // Carregar o mapa do OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
+        maxZoom: 15,
         attribution: '© OpenStreetMap'
     }).addTo(map);
 
@@ -67,3 +67,7 @@ function initMap() {
 
 // Iniciar o mapa ao carregar a página
 window.onload = initMap;
+
+document.getElementById("voltar").addEventListener("click", function() {
+    window.open("index.html", "_blank");
+});
