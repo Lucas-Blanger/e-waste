@@ -41,7 +41,8 @@ function initMap() {
 
     // Carregar o mapa do OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 15,
+        language: 'pt',
+        maxZoom: 20,
         attribution: '© OpenStreetMap'
     }).addTo(map);
 
@@ -69,5 +70,5 @@ function initMap() {
 window.onload = initMap;
 
 document.getElementById("voltar").addEventListener("click", function() {
-    window.open("index.html", "_blank");
+    window.location.href = "index.html";
 });

@@ -24,11 +24,14 @@
             <h1>Pilha Map</h1>
             <h2>Clique no botão para saber o ponto de coleta de lixo eletrônico mais próximo</h2>
             <button id="getLocation">Permitir Localização</button>
+            <div id="loading" style="display: none;">
+                <img src="assets/gif/looding.svg" alt="Carregando..." />
+            </div>
         </div>
 
         <div class="carousel-section">
             <div class="carousel-container">
-                <button id="prevBtn"><</button>
+                <button id="prevBtn">❮</button>
                 <div class="carousel">
                     <img src="assets/img/img1.png" alt="Imagem 1" class="carousel-image">
                     <img src="assets/img/img2.png" alt="Imagem 2" class="carousel-image">
@@ -39,7 +42,7 @@
                     <img src="assets/img/img7.png" alt="Imagem 7" class="carousel-image">
                     <img src="assets/img/img8.png" alt="Imagem 8" class="carousel-image">
                 </div>
-                <button id="nextBtn">></button>
+                <button id="nextBtn">❯</button>
             </div>
         </div>
     </div>
@@ -85,7 +88,7 @@
             <li>
                 <button class="point-item" onclick="toggleInfo(4)">CAMPUS DA UFSM</button>
                 <div class="point-info" id="info-4">
-                    <p>Endereço: RAv. Roraima, nº 1000, Cidade Universitária, Bairro Camobi</p>
+                    <p>Endereço: Av. Roraima, nº 1000, Cidade Universitária, Bairro Camobi</p>
                     <p>Materiais aceitos: Todos os tipos</p>
                 </div>
             </li>

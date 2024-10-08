@@ -1,8 +1,10 @@
 document.getElementById('getLocation').addEventListener('click', function() {
+    document.getElementById('loading').style.display = 'block';
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(success, error);
     } else {
         alert("Geolocalização não é suportada pelo seu navegador.");
+        document.getElementById('loading').style.display = 'none';
     }
 });
 
@@ -11,10 +13,11 @@ function success(position) {
     const longitude = position.coords.longitude;
 
     window.open(`mapa.html?lat=${latitude}&lng=${longitude}`, '_blank');
-
+    document.getElementById('loading').style.display = 'none';
 }
 function error() {
     alert("Não foi possível obter sua localização.");
+    document.getElementById('loading').style.display = 'none';
 }
 
 let currentIndex = 0;
@@ -88,6 +91,7 @@ function enviarFeedback() {
     .then(data => {
         console.log('Sucesso:', data);
         alert('Feedback enviado com sucesso!');
+        document.getElementById("areaFeedback").value = ''; 
     })
     .catch((error) => {
         console.error('Erro:', error);
