@@ -8,7 +8,6 @@
 body {
     background-color: #005C8B;
 }
-
 #getLocation {
     background-color: #005C8B;
     font-family: "Kanit", sans-serif; 
@@ -57,33 +56,30 @@ body {
 #getLocation:hover:before {
     width: 100%;
 }
-
-
 .container {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    height: 80vh;
-    width: 1400px;
-    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    padding: 5vw;
     background-color: #f1f1f181;
-    margin-top: 70px;
-    margin-left: 270px;
-    border-radius: 20%;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-top: 50px;
 }
 
 .text-section {
-    flex: 1; 
-    padding: 10px;
+    flex: 1;
+    padding: 20px;
     color: #005C8B;
     text-align: center;
-    font-family: "Kanit", sans-serif; 
+    font-family: "Kanit", sans-serif;
 }
 
 .text-section h1 {
     margin: 5px 0;
     font-size: 50px;
-
 }
 
 .text-section h2 {
@@ -94,68 +90,120 @@ body {
 }
 
 .carousel-section {
-    flex: 2.0; 
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
 .carousel-container {
-    position: relative; 
-    width: 700px; 
-    height: 600px; 
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
     margin: 0 auto;
 }
 
 .carousel {
     width: 100%;
-    height: 100%;
     overflow: hidden;
     position: relative;
-    border-radius: 20%;
+    display: flex; /* Ajuste importante */
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .carousel-image {
     width: 100%;
-    height: 100%;
-    display: none;
-    position: absolute;
+    height: auto;
+    display: block; 
+    transition: transform 0.5s ease-in-out; 
+    border-radius: 20%;
 }
 
 .carousel-image.active {
-    display: block;
+    transform: translateX(0); 
 }
 
-
-#prevBtn {
+/* Botões de navegação */
+#prevBtn, #nextBtn {
     position: absolute;
     top: 50%;
-    left: 10px; 
-    transform: translateY(-50%); 
-    background-color: rgba(0, 93, 139, 0.562); 
+    transform: translateY(-50%);
+    background-color: rgba(0, 93, 139, 0.562);
     color: white;
     border: none;
     padding: 10px;
     font-size: 20px;
     cursor: pointer;
-    z-index: 10; 
+    z-index: 10;
     border-radius: 50%;
+}
+
+#prevBtn {
+    left: 10px;
 }
 
 #nextBtn {
-    position: absolute;
-    top: 50%; 
-    right: 10px; 
-    transform: translateY(-50%);
-    background-color: rgba(0, 93, 139, 0.562); 
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 10; 
-    border-radius: 50%;
+    right: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-section h1 {
+        font-size: 40px;
+    }
+
+    .text-section h2 {
+        font-size: 18px;
+        padding-bottom: 20px;
+    }
+
+    .carousel-section {
+        width: 100%;
+    }
+
+    .carousel-container {
+        max-width: 90vw;
+        height: auto;
+    }
+
+    #getLocation {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .text-section h1 {
+        font-size: 30px;
+    }
+
+    .text-section h2 {
+        font-size: 16px;
+        padding-bottom: 20px;
+    }
+
+    .carousel-container {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .menu-bar {
@@ -247,6 +295,10 @@ body {
     padding: 10px;
     border-left: 3px solid #005C8B;
     margin-top: 5px;
+}
+
+#title-pontos{
+    font-family: "Kanit", sans-serif;
 }
 
 
