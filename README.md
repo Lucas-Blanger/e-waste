@@ -1,26 +1,32 @@
-Mapa E-Waste
+# E-Waste ♻️
 
-Este projeto é uma aplicação web que exibe um mapa interativo para guiar os usuários até o ponto de coleta de lixo eletrônico mais próximo. Utiliza a biblioteca Leaflet para renderizar o mapa e a Leaflet Routing Machine para traçar rotas.
-Funcionalidades
+O **E-Waste** é um projeto desenvolvido para facilitar o descarte consciente de lixo eletrônico na cidade de Santa Maria, RS. Ele utiliza mapas interativos para ajudar a comunidade a localizar pontos de coleta próximos e oferece informações detalhadas sobre os locais e os materiais aceitos.
 
-    Mapa interativo: Mostra o mapa da área atual do usuário com a ajuda da biblioteca Leaflet.
-    Roteamento automático: Traça uma rota até o ponto de coleta de lixo eletrônico mais próximo.
-    Design Responsivo: Adaptável para diferentes tamanhos de tela com base nas configurações da viewport.
+## 🎯 Objetivo
+Promover a destinação correta e sustentável de resíduos eletrônicos, como pilhas, baterias e aparelhos, contribuindo para a preservação ambiental e incentivando práticas de descarte consciente.
 
-Tecnologias Utilizadas
+## 🛠️ Funcionalidades
+- Localização de pontos de coleta de lixo eletrônico por meio de mapas interativos.
+- Informações detalhadas sobre os locais de coleta, incluindo endereço, horário de funcionamento e materiais aceitos.
+- Rota até o ponto de coleta mais próximo.
+- Área de feedback para reportar erros ou sugerir melhorias no site.
+- Design responsivo e intuitivo, desenvolvido com HTML, CSS e JavaScript.
 
-    HTML5: Estrutura básica do documento.
-    CSS3: Estilização do site, incluindo a utilização de fontes customizadas do Google Fonts.
-    JavaScript: Funcionalidades dinâmicas, incluindo o uso de bibliotecas externas para renderização de mapas e cálculo de rotas.
-    Leaflet: Biblioteca JavaScript para mapas interativos.
-    Leaflet Routing Machine: Extensão do Leaflet para traçar rotas no mapa.
+🌐 Tecnologias Utilizadas
 
-Créditos
+- HTML5: Estrutura da página.
+- CSS3: Estilização do site.
+- JavaScript: Funcionalidades interativas.
+- Leaflet.js: Biblioteca para mapas interativos.
+- Google Fonts: Fontes estilizadas para o design.
 
-    João Guasso
-    Leonardo Brisolla
+📜 Licença
+
+Este projeto é licenciado sob a licença MIT. Consulte o arquivo LICENSE para obter mais detalhes.
+👨‍💻 Equipe de Desenvolvimento
+
     Lucas Blanger
 
-Licença
+Nota: Este projeto foi desenvolvido no âmbito da disciplina Computadores e Sociedade, oferecida pelo Centro de Tecnologia da Universidade Federal de Santa Maria (UFSM).
 
-© 2024 E-Waste. Todos os direitos reservados.
+💡 Contribua para tornar o descarte de lixo eletrônico mais eficiente e sustentável!

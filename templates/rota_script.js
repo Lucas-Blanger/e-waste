@@ -51,6 +51,71 @@ function initMap() {
         attribution: '© OpenStreetMap'
     }).addTo(map);
 
+    L.marker([-29.6834813, -53.8565529]).addTo(map)
+    .bindPopup(`
+        <strong>Asmar</strong><br>
+        Telefone: (55) 98111-0146<br>
+        Horário: 9h - 18h
+    `)
+
+
+L.marker([-29.701601, -53.8431684]).addTo(map)
+    .bindPopup(`
+        <strong>MULTIPLASPEL</strong><br>
+        Telefone e WhatsApp: (55) 3212-6074<br>
+        Horário: 9h - 18h
+    `)
+
+
+L.marker([-29.712002, -53.8135676]).addTo(map)
+    .bindPopup(`
+        <strong>MARINGÁ METAIS</strong><br>
+        Telefone: (55) 3213-2074<br>
+        Horário: 9h - 18h
+    `)
+
+
+L.marker([-29.706964, -53.829359]).addTo(map)
+    .bindPopup(`
+        <strong>SHOPPING PRAÇA NOVA</strong><br>
+        Horário: 9h - 18h
+    `)
+
+
+
+L.marker([-29.706964, -53.829359]).addTo(map)
+    .bindPopup(`
+        <strong>SHOPPING PRAÇA NOVA</strong><br>
+        Horário: 9h - 18h
+    `)
+
+
+L.marker([-29.7137182, -53.7212777]).addTo(map)
+    .bindPopup(`
+        <strong>Anexo A - Centro de Tecnologia</strong><br>
+        Horário: 9h - 18h
+    `)
+
+L.marker([-29.7144052, -53.7179593]).addTo(map)
+    .bindPopup(`
+        <strong>Subsolo do Hospital Universitário (Husm)</strong><br>
+        Horário: 9h - 18h
+    `)
+
+    
+L.marker([-29.7216763, -53.7147912]).addTo(map)
+    .bindPopup(`
+        <strong>Comitê Ambiental da Casa do Estudante (CEU)</strong><br>
+        Horário: 9h - 18h
+    `)
+
+
+L.marker([-29.7146546, -53.7166214]).addTo(map)
+    .bindPopup(`
+        <strong>Centro de Ciências Naturais e Exatas (CCNE)</strong><br>
+        Horário: 9h - 18h
+    `)
+
     // Marcador para a localização do usuário
     L.marker(userLocation).addTo(map).bindPopup('Sua localização').openPopup();
 
