@@ -1,8 +1,13 @@
 const pontosDeColeta = [
     { lat: -29.6834813, lng: -53.8565529, nome: "ASMAR" },
     { lat: -29.701601, lng: -53.8431684, nome: "MULTIPLASPEL" },
+    { lat: -29.712002, lng: -53.8135676, nome: "MARINGÁ METAIS" },
     { lat: -29.706964, lng: -53.829359, nome: "SHOPPING PRAÇA NOVA" },
-    { lat: -29.713287, lng: -53.7176128, nome: "CAMPUS DA UFSM" }
+    { lat: -29.7137182, lng: -53.7212777, nome: "Anexo A - Centro de Tecnologia" },
+    { lat: -29.7144052, lng: -53.7179593, nome: "Subsolo do Hospital Universitário (Husm)" },
+    { lat: -29.7216763, lng: -53.7147912, nome: "Comitê Ambiental da Casa do Estudante (CEU)" },
+    { lat: -29.7146546, lng: -53.7166214, nome: "Centro de Ciências Naturais e Exatas (CCNE)" }
+
 ];
 
 // Função para calcular a distância entre dois pontos (Haversine formula)

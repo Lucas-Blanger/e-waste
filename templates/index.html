@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Guerrilla&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 </head>
 <body>
     <header>
@@ -20,7 +21,7 @@
             </ul>
         </nav>
     </header>
-     <div class="container">
+    <div class="container">
         <div class="text-section">
             <img src="assets/img/logo.png" alt="Imagem sobre E-Waste" class="logo">
             <h1>E-Waste</h1>
@@ -30,23 +31,9 @@
                 <img src="assets/gif/looding.svg" alt="Carregando..." />
             </div>
         </div>
-
-        <div class="carousel-section">
-            <div class="carousel-container">
-                <button id="prevBtn">❮</button>
-                <div class="carousel">
-                    <img src="assets/img/img1.png" alt="Imagem 1" class="carousel-image">
-                    <img src="assets/img/img2.png" alt="Imagem 2" class="carousel-image">
-                    <img src="assets/img/img3.png" alt="Imagem 3" class="carousel-image">
-                    <img src="assets/img/img4.png" alt="Imagem 4" class="carousel-image">
-                    <img src="assets/img/img5.png" alt="Imagem 5" class="carousel-image">
-                    <img src="assets/img/img6.png" alt="Imagem 6" class="carousel-image">
-                    <img src="assets/img/img7.png" alt="Imagem 7" class="carousel-image">
-                    <img src="assets/img/img8.png" alt="Imagem 8" class="carousel-image">
-                </div>
-                <button id="nextBtn">❯</button>
-            </div>
-        </div>
+    
+        <div id="map"></div>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     </div>
     <section id="points-section" class="points-section">
         <h2 id="title-pontos">Pontos de Coleta</h2>
@@ -90,7 +77,11 @@
             <li>
                 <button class="point-item" onclick="toggleInfo(4)">CAMPUS DA UFSM</button>
                 <div class="point-info" id="info-4">
-                    <p>Endereço: Av. Roraima, nº 1000, Cidade Universitária, Bairro Camobi</p>
+                    <p>Endereço: Av. Roraima, nº 1000, Cidade Universitária, Bairro Camobi,</p>
+                    <p>Anexo A do Centro de Tecnologia (CT)</p>
+                    <p>Subsolo do Hospital Universitário (Husm)</p>
+                    <p>Comitê Ambiental da Casa do Estudante (CEU)</p>
+                    <p>Centro de Ciências Naturais e Exatas (CCNE)</p>
                     <p>Materiais aceitos: Todos os tipos</p>
                 </div>
             </li>
